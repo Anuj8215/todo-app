@@ -2,21 +2,25 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./config/db");
+const authRoutes = require("./routes/auth");
+const todoRoutes = require("./routes/todo");
+
 
 dotenv.config();
-connectDB(); 
+connectDB();
 
 const app = express();
-
-
+app.use("/api/todo", todoRoutes);
 app.use(express.json());
 app.use(cors());
 
+// Routes
+app.use("/api/auth", authRoutes);
 
+// Default Routes
 app.get("/", (req, res) => {
   res.send("MongoDB is Connected & API is Running!");
 });
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
