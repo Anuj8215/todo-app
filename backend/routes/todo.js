@@ -28,3 +28,27 @@ router.post("/add", authMiddleware, async (req, res) => {
     });
   }
 });
+
+
+router.get("/all", authMiddleware, async (req,res) => {
+  try{
+      console.log(req.id);
+      const todos = await Todo.find({userId:req.id});
+      res.json(todos);
+  }catch{
+      res.status(500).json({message : "Server Error"});
+  }
+});
+
+
+router.delete("/delete/:id",authMiddleware,async(req,res)=>{
+  try{
+    await Todo.findByIdAndDelete(req.params.id);
+    res.json({message: "To-Do Deleted"});
+  }catch(error){
+    res.status(500).json({message:"Server Error"});
+  }
+});
+
+
+module.exports = router;
