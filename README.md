@@ -5,7 +5,7 @@ JWT-based authorization, and full CRUD operations. Built with MongoDB,
 Express.js, and Vanilla JavaScript, this application provides a simple yet professional task management experience.
 
 
-🔹 Features
+🔹Features
 ✅ User Authentication – Secure Signup & Login using JWT
 ✅ Task Management (CRUD) – Create, Read, Update, and Delete to-dos
 ✅ Role-Based Authorization – Protect routes with JWT middleware
