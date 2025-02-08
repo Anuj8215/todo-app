@@ -1,25 +1,91 @@
+/* Apply a modern gradient background */
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+}
+
+/* Main container styling */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 350px;
+    animation: fadeIn 0.5s ease-in-out;
 }
-form {
-    margin: 20px;
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
+
+/* Styling for input field */
 input {
+    width: 90%;
     padding: 10px;
-    margin: 5px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
 }
+
+/* Button styling */
 button {
-    padding: 10px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
+
+/* Hover effect */
+button:hover {
+    background: linear-gradient(135deg, #ff5f6d, #ff7eb3);
+    transform: scale(1.05);
+}
+
+/* Todo list styling */
 ul {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
 }
+
+/* Individual todo item */
 li {
-    margin: 5px;
-    padding: 5px;
-    background: lightgray;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* Hover effect for todo items */
+li:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.02);
+}
+
+/* Delete button inside todo items */
+li button {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+li button:hover {
+    background: linear-gradient(135deg, #d92045, #ff4b2b);
 }

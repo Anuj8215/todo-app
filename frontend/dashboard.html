@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>To-Do List</h2>
-    <button onclick="logout()">Logout</button>
-    <form id="todoForm">
-        <input type="text" id="todoInput" placeholder="Enter a task" required>
-        <button type="submit">Add</button>
-    </form>
-    <ul id="todoList"></ul>
-    <script src="script.js"></script>
+    <div class="container">
+        <h2>Todo Dashboard</h2>
+        <input type="text" id="todoInput" placeholder="Enter a new todo">
+        <button onclick="addTodo()">Add Todo</button>
+
+        <ul id="todoList"></ul>
+    </div>
+
+    <script src="dashboard.js"></script>
 </body>
 </html>
